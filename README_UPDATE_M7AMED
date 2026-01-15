@@ -1,0 +1,24 @@
+# Media Advisor Expert System with Conflict Resolution
+
+## 📌 Project Overview
+This project implements a **Rule-Based Media Advisor Expert System** designed to recommend the most appropriate communication media based on message characteristics.
+
+A key challenge addressed in this system is **rule conflict**, which occurs when multiple rules are triggered simultaneously and suggest different media options.  
+To handle this, a **Conflict Resolution Mechanism** is implemented using expert system strategies.
+
+---
+
+## 🎯 Conflict Scenario
+
+A conflict occurs when the message has the following characteristics:
+
+- Urgent
+- Sensitive
+- Intended for a large audience
+
+In this case, multiple rules are activated, each recommending a different media channel such as:
+- SMS
+- Social Media
+- Email
+- Direct Phone Call
+This situation requires a conflict resolution strategy to choose the most appropriate recommendation.
