@@ -1,0 +1,29 @@
+from experta import *
+
+class MediaSystem(KnowledgeEngine):
+
+    @Rule(Fact(complexity='high'), salience=10)
+    def technical_case(self):
+        self.declare(Fact(recommendation='detailed written manual'))
+        print("logic: high complexity requires detailed written material.")
+
+    @Rule(Fact(interaction='required'), salience=20)
+    def interactive_case(self):
+        self.declare(Fact(recommendation='live workshop/tutorial'))
+        print("logic: interactive learning requires live sessions.")
+
+    @Rule(Fact(status='emergency'), salience=100)
+    def emergency_priority(self):
+        self.declare(Fact(recommendation='immediate audio broadcast'))
+        print("\n[meta-rule activated]")
+        print("emergency detected: overriding all other rules.")
+        print("conflict resolution method: Priority (salience = 100)")
+
+
+engine = MediaSystem()
+engine.reset()
+
+engine.declare(Fact(complexity='high'))
+engine.declare(Fact(interaction='required'))
+engine.declare(Fact(status='emergency'))
+engine.run()
