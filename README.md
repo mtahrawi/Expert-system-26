@@ -1,6 +1,7 @@
 from experta import *
 
 class MediaSystem(KnowledgeEngine):
+
     @Rule(Fact(status='emergency'),
           NOT(Fact(final=True)),
           salience=100)
