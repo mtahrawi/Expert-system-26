@@ -1,5 +1,6 @@
 from experta import *
 
+
 class MediaSystem(KnowledgeEngine):
 
     @Rule(Fact(status='emergency'),
